@@ -102,19 +102,23 @@ body {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.7;
   }
+
   25% {
     transform: translate(50px, -50px) scale(1.1);
     opacity: 0.9;
   }
+
   50% {
     transform: translate(-30px, 30px) scale(0.9);
     opacity: 0.6;
   }
+
   75% {
     transform: translate(40px, 60px) scale(1.05);
     opacity: 0.8;
@@ -133,6 +137,7 @@ body {
   z-index: 1000;
   padding: 1rem 0;
 }
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -232,7 +237,7 @@ body {
   height: 150px;
   margin: 0 auto;
   border-radius: 50%;
-background-image: url("profile.jpeg");
+  background-image: url("profile.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -437,6 +442,7 @@ section {
 .skill-item {
   margin-bottom: 1.5rem;
 }
+
 .skill-progress {
   width: 90%;
 }
@@ -456,44 +462,58 @@ section {
   overflow: hidden;
 }
 
-.skill-progress1 {
-  height: 100%;
-  width: 90%;
-  background: linear-gradient(90deg, #00c853, #69f0ae); /* bright green for 90% */
-  border-radius: 5px;
-  animation: fillBar 1.5s ease-out;
-}
-
-.skill-progress2 {
-  height: 100%;
-  width: 85%;
-  background: linear-gradient(90deg, #64dd17, #aeea00); /* light green-yellow for 85% */
-  border-radius: 5px;
-  animation: fillBar 1.5s ease-out;
-}
-
-.skill-progress3 {
-  height: 100%;
-  width: 80%;
-  background: linear-gradient(90deg, #ffd600, #ffea00); /* yellow for 80% */
-  border-radius: 5px;
-  animation: fillBar 1.5s ease-out;
-}
-
-.skill-progress4 {
-  height: 100%;
-  width: 60%;
-  background: linear-gradient(90deg, #ff6d00, #d50000); /* orange to red for 60% */
-  border-radius: 5px;
-  animation: fillBar 1.5s ease-out;
-}
-
-
 @keyframes fillBar {
   from {
     width: 0;
   }
+
+  to {
+    width: 100%;
+  }
 }
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Base style for all progress bars */
+.skill-progress1,
+.skill-progress2,
+.skill-progress3,
+.skill-progress4 {
+  height: 100%;
+  border-radius: 5px;
+  background-size: 200% 200%;
+  animation: fillBar 1.5s ease-out, gradientMove 3s infinite alternate;
+}
+
+/* Individual color gradients with matching widths */
+.skill-progress1 {
+  width: 90%;
+  background: linear-gradient(90deg, #00c853, #69f0ae, #00e676);
+}
+
+.skill-progress2 {
+  width: 85%;
+  background: linear-gradient(90deg, #64dd17, #aeea00, #76ff03);
+}
+
+.skill-progress3 {
+  width: 80%;
+  background: linear-gradient(90deg, #ffd600, #ffea00, #ffee58);
+}
+
+.skill-progress4 {
+  width: 60%;
+  background: linear-gradient(90deg, #ff6d00, #ff3d00, #d50000);
+}
+
 
 .learning-skills {
   display: grid;
@@ -722,6 +742,7 @@ section {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
