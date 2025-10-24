@@ -42,7 +42,7 @@ body {
   height: 100%;
   z-index: -1;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #9d63a4 0%, #764ba2 50%, #f093fb 100%);
 }
 
 .circle {
@@ -61,8 +61,8 @@ body {
   height: 300px;
   top: 10%;
   left: 10%;
-  animation-delay: 0s;
-  background: radial-gradient(circle, rgba(255, 77, 143, 0.3), transparent);
+  animation-delay: 1s;
+  background: radial-gradient(circle, rgba(184, 75, 115, 0.3), transparent);
 }
 
 .circle-2 {
@@ -71,7 +71,7 @@ body {
   top: 60%;
   right: 15%;
   animation-delay: 2s;
-  background: radial-gradient(circle, rgba(108, 92, 231, 0.3), transparent);
+  background: radial-gradient(circle, rgba(209, 215, 108, 0.3), transparent);
 }
 
 .circle-3 {
@@ -80,7 +80,7 @@ body {
   bottom: 10%;
   left: 20%;
   animation-delay: 4s;
-  background: radial-gradient(circle, rgba(0, 206, 201, 0.3), transparent);
+  background: radial-gradient(circle, rgba(204, 119, 100, 0.3), transparent);
 }
 
 .circle-4 {
@@ -89,7 +89,7 @@ body {
   top: 30%;
   right: 30%;
   animation-delay: 1s;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  background: radial-gradient(circle, rgba(141, 61, 160, 0.2), transparent);
 }
 
 .circle-5 {
@@ -97,7 +97,7 @@ body {
   height: 220px;
   bottom: 30%;
   right: 10%;
-  animation-delay: 3s;
+  animation-delay: 2s;
   background: radial-gradient(circle, rgba(245, 87, 108, 0.3), transparent);
 }
 
@@ -237,7 +237,8 @@ body {
   height: 150px;
   margin: 0 auto;
   border-radius: 50%;
-  background-image: url("profile.jpeg");
+background-color: #36364e;
+
   background-size: cover;
   background-position: center;
   display: flex;
@@ -495,22 +496,22 @@ section {
 
 /* Individual color gradients with matching widths */
 .skill-progress1 {
-  width: 90%;
+  width: 60%;
   background: linear-gradient(90deg, #00c853, #69f0ae, #00e676);
 }
 
 .skill-progress2 {
-  width: 85%;
+  width: 45%;
   background: linear-gradient(90deg, #64dd17, #aeea00, #76ff03);
 }
 
 .skill-progress3 {
-  width: 80%;
+  width: 25%;
   background: linear-gradient(90deg, #ffd600, #ffea00, #ffee58);
 }
 
 .skill-progress4 {
-  width: 60%;
+  width: 10%;
   background: linear-gradient(90deg, #ff6d00, #ff3d00, #d50000);
 }
 
